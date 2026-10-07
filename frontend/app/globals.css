@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --neo-canvas: #e0e5ec;
+  --neo-surface: #e0e5ec;
+  --neo-text: #1a202c;
+  --neo-muted: #4a5568;
+  --neo-shadow-dark: #a3b1c6;
+  --neo-shadow-light: #ffffff;
+  --neo-radius-card: 20px;
+  --neo-radius-control: 12px;
+  --background: var(--neo-canvas);
+  --foreground: var(--neo-text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-neo-canvas: var(--neo-canvas);
+  --color-neo-surface: var(--neo-surface);
+  --color-neo-text: var(--neo-text);
+  --color-neo-muted: var(--neo-muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-neo-card: var(--neo-radius-card);
+  --radius-neo-control: var(--neo-radius-control);
+  --shadow-neo-raised: 6px 6px 12px var(--neo-shadow-dark),
+    -6px -6px 12px var(--neo-shadow-light);
+  --shadow-neo-inset: inset 4px 4px 8px var(--neo-shadow-dark),
+    inset -4px -4px 8px var(--neo-shadow-light);
+  --shadow-neo-hover: inset 2px 2px 5px var(--neo-shadow-dark),
+    inset -2px -2px 5px var(--neo-shadow-light);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.neo-raised {
+  box-shadow: var(--shadow-neo-raised);
+}
+
+.neo-inset {
+  box-shadow: var(--shadow-neo-inset);
+}
+
+.neo-control {
+  border-radius: var(--neo-radius-control);
+  background: var(--neo-surface);
+  box-shadow: var(--shadow-neo-raised);
+  color: var(--neo-text);
+}
+
+.neo-control:focus-visible {
+  outline: 2px solid var(--neo-muted);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-neo-inset);
+}
+
+.neo-control:active:not(:disabled) {
+  box-shadow: var(--shadow-neo-inset);
+}
+
+.neo-row {
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.neo-row:hover,
+.neo-row:focus-visible {
+  box-shadow: var(--shadow-neo-hover);
+  outline: none;
+}

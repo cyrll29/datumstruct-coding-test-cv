@@ -1,0 +1,26 @@
+[
+  {
+    "id": 2,
+    "name": "Alan Turing",
+    "username": "alanturing",
+    "email": "alan@example.com"
+  },
+  {
+    "id": 3,
+    "name": "Grace Hopper",
+    "username": "grace",
+    "email": "grace@example.com"
+  },
+  {
+    "id": 4,
+    "name": "Christian Cyrille Villasenor",
+    "username": "cyrll29",
+    "email": "cvillasenior@gmail.com"
+  },
+  {
+    "id": 5,
+    "name": "test",
+    "username": "testtest",
+    "email": "test@example.com"
+  }
+]
